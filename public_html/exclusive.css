@@ -1,0 +1,9 @@
+img {
+    width: auto;
+    margin: 50px;
+    max-width: 300px;
+}
+
+img:hover {
+    
+}
