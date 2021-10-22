@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EXCLUSIVE MOVES HQ</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.typekit.net/gwo0ill.css">
+    <link rel="stylesheet" href="exclusive.css">
+    <link rel="shortcut icon" type="image/png" href="assets/favicon.png" />
+    <script src="components/header.js" type="text/javascript" defer></script>
+    <script src="components/footer.js" type="text/javascript" defer></script>    
+
+</head>
+<body>
+    <div class="container main">
+
+
+        <br>
+        <br>
+        <div id="testdiv">
+
+            <p>You find yourself in front of an enormous line, stretched as far as the eye can see. </p>
+        
+        
+        </div>
+        <br><br>
+        <button id="continue-button" onclick="printNextLine()">take your place at the end of the line</button>
+        
+        <script>
+            let x=0;
+            const lines = [
+        
+            "<p>You take your place behind a group of youths, all excitedly talking amongst themselves. They are tweaking hard af off research chems, u surmise.<br> You can overhear snippets of their conversation.</p> ",
+            " <p><em>i heard this is the most exclusive club in the universe. Bella Hadid was turned away at the door.</em></p> ",
+
+            "<p><em>my friend's brother knew a guy who got in once. now every day he buys a new lambo, crashes it, and takes the bus home. he doesnt have car insurance because he doesnt need it lol </em></p>",
+            "<p>the line has started to move, though many have already grown impatient enough to peel off, abandoning the wait. they dont know what theyre about to miss fr</p>",
+            "<p>the line inches forward. multiple people have soiled themselves. a woman 50 or so feet ahead of u has given birth to a baby boy. </p>" ,
+            "<p>after what feels like an eternity, the bouncer is finally in sight.</p>",
+            "<p>Holy shit! You're finally at the front of the line omg omg!!</p>"
+            ];
+        
+            const buttons = [
+                "eavesdrop",
+                "continue eavesdropping and pray the line starts moving",
+                "continue waiting",
+                "i will remain steadfast in my commitment to wait in line until i reach the door on God",
+                "that's beautiful",
+                "get your ID out of your wallet so its ready 2 show him",
+                "speak to the bouncer"
+            ];
+
+            function printNextLine(){
+                console.log(x);
+                document.getElementById('testdiv').innerHTML += lines[x];
+                document.getElementById('continue-button').innerHTML = buttons[x];
+                if (x>=6){
+                    document.getElementById('continue-button').onclick = function(){
+                        window.open("door.html","_self")
+                    };
+                    
+                };
+                x+=1;
+            
+            }
+            
+        </script>
+        <footer-component></footer-component>
+    
+    </div>
+
+    
+
+
+</body>
+</html>
